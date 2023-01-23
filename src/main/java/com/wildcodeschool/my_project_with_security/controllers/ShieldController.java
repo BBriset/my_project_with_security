@@ -23,25 +23,23 @@ public class ShieldController {
   }
 
   @GetMapping("/secret-bases")
-  public static String secretBases() {
+  public static ArrayList secretBases() {
 
     List<String> secretBases = new ArrayList<String>();
 
-    Vector<String> base = new Vector<String>();
-    base.add("Biarritz");
-    base.add("Bordeaux");
-    base.add("La Loupe");
-    base.add("Lille");
-    base.add("Lyon");
-    base.add("Nantes");
-    base.add("Orléans");
-    base.add("Paris");
-    base.add("Reims");
-    base.add("Strasbourg");
-    base.add("Toulouse");
-    Enumeration<String> e = base.elements();
-    secretBases = Collections.list(e);
-    return "Returned list: " + secretBases;
+    secretBases.add("Biarritz");
+    secretBases.add("Bordeaux");
+    secretBases.add("La Loupe");
+    secretBases.add("Lille");
+    secretBases.add("Lyon");
+    secretBases.add("Nantes");
+    secretBases.add("Orléans");
+    secretBases.add("Paris");
+    secretBases.add("Reims");
+    secretBases.add("Strasbourg");
+    secretBases.add("Toulouse");
+
+    return (ArrayList) secretBases;
 
   }
 }
